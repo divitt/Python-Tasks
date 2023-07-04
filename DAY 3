@@ -1,0 +1,268 @@
+DAY 3
+Q1) What are Data Structures? List some of data structures and their use in real world application?
+In computer science, data structures are specialized formats for organizing and storing data in a computer. They provide a way to efficiently access and manipulate large amounts of data. Here are some common data structures and their real-world applications:
+
+Arrays: An array is used to store a collection of similar data types. It is commonly used in image processing and scientific computing.
+
+Linked lists: A linked list is a sequence of nodes where each node contains a data field and a reference to the next node. Linked lists are commonly used in operating systems and compilers.
+
+Stacks: A stack is a collection of elements where elements can be added or removed only from one end. It is used in programming languages to manage function calls and expressions.
+
+Queues: A queue is a collection of elements where elements can be added at one end and removed from the other end. It is commonly used in operating systems for scheduling tasks and in web servers to handle incoming requests.
+
+Trees: A tree is a hierarchical structure consisting of nodes connected by edges. Trees are used in file systems, database indexing, and network routing algorithms.
+
+Graphs: A graph is a collection of nodes connected by edges. Graphs are used in social networks, transportation networks, and communication networks.
+
+Hash Tables: Hash tables are used to store key-value pairs, allowing for fast retrieval and insertion of data. They are commonly used in databases, caching systems, and symbol tables.
+
+Heaps: Heaps are binary trees that satisfy the heap property, which is useful for efficient priority queue operations. They are used in sorting algorithms, scheduling tasks, and graph algorithms.
+
+#Create a list data type and store names of your friends in it (at least 5), check out what are methods available in list data type, try to figure out their working using help function in python. 
+friends =["Abir","Akash","Dyutiman","Chanda","Debu"]
+help(friends)
+friends.append("Diya")
+print(friends)
+Help on list object:
+
+class list(object)
+ |  list(iterable=(), /)
+ |  
+ |  Built-in mutable sequence.
+ |  
+ |  If no argument is given, the constructor creates a new empty list.
+ |  The argument must be an iterable if specified.
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |  
+ |  __delitem__(self, key, /)
+ |      Delete self[key].
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  __ge__(self, value, /)
+ |      Return self>=value.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |  
+ |  __gt__(self, value, /)
+ |      Return self>value.
+ |  
+ |  __iadd__(self, value, /)
+ |      Implement self+=value.
+ |  
+ |  __imul__(self, value, /)
+ |      Implement self*=value.
+ |  
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __le__(self, value, /)
+ |      Return self<=value.
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  __lt__(self, value, /)
+ |      Return self<value.
+ |  
+ |  __mul__(self, value, /)
+ |      Return self*value.
+ |  
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  __reversed__(self, /)
+ |      Return a reverse iterator over the list.
+ |  
+ |  __rmul__(self, value, /)
+ |      Return value*self.
+ |  
+ |  __setitem__(self, key, value, /)
+ |      Set self[key] to value.
+ |  
+ |  __sizeof__(self, /)
+ |      Return the size of the list in memory, in bytes.
+ |  
+ |  append(self, object, /)
+ |      Append object to the end of the list.
+ |  
+ |  clear(self, /)
+ |      Remove all items from list.
+ |  
+ |  copy(self, /)
+ |      Return a shallow copy of the list.
+ |  
+ |  count(self, value, /)
+ |      Return number of occurrences of value.
+ |  
+ |  extend(self, iterable, /)
+ |      Extend list by appending elements from the iterable.
+ |  
+ |  index(self, value, start=0, stop=9223372036854775807, /)
+ |      Return first index of value.
+ |      
+ |      Raises ValueError if the value is not present.
+ |  
+ |  insert(self, index, object, /)
+ |      Insert object before index.
+ |  
+ |  pop(self, index=-1, /)
+ |      Remove and return item at index (default last).
+ |      
+ |      Raises IndexError if list is empty or index is out of range.
+ |  
+ |  remove(self, value, /)
+ |      Remove first occurrence of value.
+ |      
+ |      Raises ValueError if the value is not present.
+ |  
+ |  reverse(self, /)
+ |      Reverse *IN PLACE*.
+ |  
+ |  sort(self, /, *, key=None, reverse=False)
+ |      Sort the list in ascending order and return None.
+ |      
+ |      The sort is in-place (i.e. the list itself is modified) and stable (i.e. the
+ |      order of two equal elements is maintained).
+ |      
+ |      If a key function is given, apply it once to each list item and sort them,
+ |      ascending or descending, according to their function values.
+ |      
+ |      The reverse flag can be set to sort in descending order.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |  
+ |  __class_getitem__(...) from builtins.type
+ |      See PEP 585
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+
+['Abir', 'Akash', 'Dyutiman', 'Chanda', 'Debu', 'Diya']
+Help on list object:
+
+class list(object) | list(iterable=(), /) |
+| Built-in mutable sequence. |
+| If no argument is given, the constructor creates a new empty list. | The argument must be an iterable if specified. |
+| Methods defined here: |
+| add(self, value, /) | Return self+value. |
+| contains(self, key, /) | Return key in self. |
+| delitem(self, key, /) | Delete self[key]. |
+| eq(self, value, /) | Return self==value. |
+| ge(self, value, /) | Return self>=value. |
+| getattribute(self, name, /) | Return getattr(self, name). |
+| getitem(...) | x.getitem(y) <==> x[y] |
+| gt(self, value, /) | Return self>value. |
+| iadd(self, value, /) | Implement self+=value. |
+| imul(self, value, /) | Implement self=value. |
+| init(self, /, args, kwargs) | Initialize self. See help(type(self)) for accurate signature. |
+| iter(self, /) | Implement iter(self). |
+| le(self, value, /) | Return self<=value. |
+| len(self, /) | Return len(self). |
+| lt(self, value, /) | Return self<value. |
+| mul(self, value, /) | Return selfvalue. |
+| ne(self, value, /) | Return self!=value. |
+| repr(self, /) | Return repr(self). |
+| reversed(self, /) | Return a reverse iterator over the list. |
+| rmul(self, value, /) | Return valueself. |
+| setitem(self, key, value, /) | Set self[key] to value. |
+| sizeof(self, /) | Return the size of the list in memory, in bytes. |
+| append(self, object, /) | Append object to the end of the list. |
+| clear(self, /) | Remove all items from list. |
+| copy(self, /) | Return a shallow copy of the list. |
+| count(self, value, /) | Return number of occurrences of value. |
+| extend(self, iterable, /) | Extend list by appending elements from the iterable. |
+| index(self, value, start=0, stop=9223372036854775807, /) | Return first index of value. |
+| Raises ValueError if the value is not present. |
+| insert(self, index, object, /) | Insert object before index. |
+| pop(self, index=-1, /) | Remove and return item at index (default last). |
+| Raises IndexError if list is empty or index is out of range. |
+| remove(self, value, /) | Remove first occurrence of value. |
+| Raises ValueError if the value is not present. |
+| reverse(self, /) | Reverse IN PLACE. |
+| sort(self, /, , key=None, reverse=False) | Sort the list in ascending order and return None. |
+| The sort is in-place (i.e. the list itself is modified) and stable (i.e. the | order of two equal elements is maintained). |
+| If a key function is given, apply it once to each list item and sort them, | ascending or descending, according to their function values. |
+| The reverse flag can be set to sort in descending order. |
+| ---------------------------------------------------------------------- | Class methods defined here: |
+| class_getitem(...) from builtins.type | See PEP 585 |
+| ---------------------------------------------------------------------- | Static methods defined here: |
+| new(args, kwargs) from builtins.type | Create and return a new object. See help(type) for accurate signature. |
+| ---------------------------------------------------------------------- | Data and other attributes defined here: |
+| hash = None
+
+['Abir', 'Akash', 'Dyutiman', 'Chanda', 'Debu', 'Diya']
+
+Q-4) What is difference between ordered data type and unordered data type?
+The difference between ordered data types and unordered data types lies in the way the elements within the data type are organized or structured.
+
+Ordered Data Types:
+
+Ordered data types maintain a specific order or sequence among their elements. Elements are typically accessed and retrieved based on their position or index within the data type. Examples of ordered data types include lists, arrays, tuples, and strings. The order of elements in these data types is significant and can be used to perform operations like indexing, slicing, and sorting. Unordered Data Types:
+
+Unordered data types do not have a specific order or sequence among their elements. Elements within these data types are stored in a way that optimizes for fast retrieval rather than maintaining a specific order. Elements are typically accessed and retrieved based on their key or value rather than their position. Examples of unordered data types include sets, dictionaries, and hash tables. The order of elements in these data types is not significant, and operations like indexing and slicing are not applicable. Unordered data types are often used for membership testing, unique value storage, and efficient lookup operations.
+
+Q5) Write down types of each value given? (In python)
+a. 100
+
+b. 105.5
+
+c. 192.56j
+
+d. 10+6j
+
+e. ‘10’
+
+f. ‘Hello world’5
+
+g. [ 10, 20, 50, 100]
+
+h. {‘name’: ‘sachin’, ‘age’: 24, ‘language’: ‘python’}
+
+print(type(100))
+print(type(100))
+print(type(105.5))
+print(type(192.56j))
+print(type(10+6j))
+print(type('10'))
+print(type('Hello world'))
+value = [10,20,50,100]
+print(type(value))
+data = {'name':'sachin','age':24,'language':'python'}
+print(type(data))
+<class 'int'>
+<class 'int'>
+<class 'float'>
+<class 'complex'>
+<class 'complex'>
+<class 'str'>
+<class 'str'>
+<class 'list'>
+<class 'dict'>
